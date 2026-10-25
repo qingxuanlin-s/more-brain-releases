@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "more-brain-plugin-sdk"
+version = "1.0.0"
+description = "More Brain Python 插件的公共契约与静态校验工具"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+more-brain-plugin = "more_brain_plugin_sdk.cli:main"
+
+[tool.hatch.build]
+dev-mode-dirs = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/more_brain_plugin_sdk"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/examples", "/tests", "/README.md", "/pyproject.toml"]

@@ -1,0 +1,13 @@
+[plugin]
+id = "demo-echo-consumer"
+name = "开发示例：能力消费者"
+version = "0.1.0"
+entrypoint = "plugin.py:create_plugin"
+host_api = ">=1.0,<2.0"
+isolation = "in-process"
+enabled_by_default = false
+
+[[requires]]
+kind = "example.echo"
+name = "demo-hello-backend"
+api = 1

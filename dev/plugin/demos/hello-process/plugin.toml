@@ -1,0 +1,14 @@
+[plugin]
+id = "demo-hello-process"
+name = "开发示例：受限子进程"
+version = "0.1.0"
+entrypoint = "plugin.py:create_plugin"
+host_api = ">=1.0,<2.0"
+isolation = "process"
+enabled_by_default = false
+
+[[provides]]
+kind = "example.echo"
+name = "demo-hello-process"
+api = 1
+exclusive = true

@@ -1,0 +1,15 @@
+[plugin]
+id = "demo-hello-backend"
+name = "开发示例：后端"
+version = "0.1.0"
+description = "演示配置、JSON Gateway 与版本化 echo 能力"
+entrypoint = "plugin.py:create_plugin"
+host_api = ">=1.0,<2.0"
+isolation = "in-process"
+enabled_by_default = false
+
+[[provides]]
+kind = "example.echo"
+name = "demo-hello-backend"
+api = 1
+exclusive = true

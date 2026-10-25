@@ -1,0 +1,16 @@
+[plugin]
+id = "demo-hello-react"
+name = "开发示例：React 页面"
+version = "0.1.0"
+entrypoint = "plugin.py:create_plugin"
+host_api = ">=1.0,<2.0"
+isolation = "in-process"
+enabled_by_default = false
+
+[client]
+entry = "dist/client.js"
+styles = []
+sdk_api = ">=1.0,<2.0"
+renderer = "react"
+slots = ["global.navigation", "global.workspace"]
+commands = ["demo-hello-react.echo"]
